@@ -52,7 +52,6 @@ section.home {
 img.me {
   max-width: 200px;
   border-radius: 50%;
-  margin-bottom: 20px;
 }
 @media screen and (max-width: 600px) {
 .name {font-size: 1rem;}

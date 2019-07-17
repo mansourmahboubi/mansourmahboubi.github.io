@@ -74,8 +74,13 @@ footer a:hover{
   transform: translate(0px, -50%);
 }
 footer .icon{
-  height: 4rem;
   color: black;
+}
+footer svg{
+  height: 4rem;
+}
+footer svg:hover{
+  transform: translate(0px, -50%);
 }
 @media screen and (max-width: 600px) {
   .name {font-size: 1rem;}

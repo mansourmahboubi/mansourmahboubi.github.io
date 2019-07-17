@@ -26,7 +26,9 @@ li a {
   display: block;
   color: #000;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   text-decoration: none;
 }
 li a:hover {
@@ -39,6 +41,7 @@ section.home {
   text-align: center;
 }
 .name {
+  line-height: 2rem;
   font-size: 2rem;
   color: #000;
   font-family: 'Vollkorn', serif;
@@ -73,10 +76,21 @@ footer a{
 footer a:hover{
   transform: translate(0px, -50%);
 }
-footer .icon{
+footer .icon_github{
   color: black;
 }
+footer .icon_twitter{
+  color: #24A1F2;
+}
+footer .icon_ln{
+  color: #1877B5;
+}
+footer .icon_email{
+  color: #000;
+}
+
 footer svg{
+  padding: 0.1rem;
   height: 4rem;
 }
 footer svg:hover{
@@ -85,8 +99,13 @@ footer svg:hover{
 @media screen and (max-width: 600px) {
   .name {font-size: 1rem;}
   .info {font-size: 0.7rem;}
-  li a{padding: 3rem 0.5rem;}
+  li a{padding: 1rem 0.5rem;}
   li a:hover {transform: scale(1.2)}
+}
+@media screen and (max-width: 400px) {
+  footer svg{
+    height: 2rem;
+  }
 }
 /* https://daneden.github.io/animate.css/ */
 .animated {

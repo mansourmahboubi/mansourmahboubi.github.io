@@ -74,23 +74,15 @@ footer a{
 footer a:hover{
   transform: translate(0px, -50%);
 }
-.Spritesgithub, .Spriteslinkedin, .Spritestwitter{
-  display: inline-block;
-  background: url('/img/sprites.png') no-repeat;
-  overflow: hidden;
-  text-indent: -9999px;
-  text-align: left;
+footer .icon{
+  height: 4rem;
+  color: black;
 }
-
-.Spritesgithub { background-position: -2px -0px; width: 50px; height: 50px; }
-.Spriteslinkedin { background-position: -2px -52px; width: 50px; height: 50px;transform: scale(0.8); }
-.Spritestwitter { background-position: -2px -104px; width: 50px; height: 41px;transform: scale(0.8); }
-.Sprites { -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */ filter: grayscale(100%);}
 @media screen and (max-width: 600px) {
-.name {font-size: 1rem;}
-.info {font-size: 0.7rem;}
-li a{padding: 3rem 0.5rem;}
-li a:hover {transform: scale(1.2)}
+  .name {font-size: 1rem;}
+  .info {font-size: 0.7rem;}
+  li a{padding: 3rem 0.5rem;}
+  li a:hover {transform: scale(1.2)}
 }
 /* https://daneden.github.io/animate.css/ */
 .animated {
@@ -100,8 +92,8 @@ li a:hover {transform: scale(1.2)}
   animation-fill-mode: both;
 }
 .long_animated {
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }

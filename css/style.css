@@ -54,18 +54,18 @@ img.me {
   border-radius: 50%;
 }
 /* footer */
-.footer{
+footer{
   background-color: #FFF;
   position: fixed;
   bottom: 0px;
   width: 100%;
   text-align: center;
 }
-.footer a{
+footer a{
   margin-right: 1rem;
   margin-left: 1rem;
 }
-.footer a:hover{
+footer a:hover{
   transform: rotate(1turn);
 }
 .Spritesgithub, .Spriteslinkedin, .Spritestwitter

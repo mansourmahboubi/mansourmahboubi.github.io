@@ -74,7 +74,7 @@ footer a{
   margin-left: 1rem;
 }
 footer a:hover{
-  transform: translate(0px, -50%);
+  transform: translate(0px, -20%);
 }
 footer .icon_github{
   color: black;
@@ -94,7 +94,7 @@ footer svg{
   height: 4rem;
 }
 footer svg:hover{
-  transform: translate(0px, -50%);
+  transform: translate(0px, -20%);
 }
 @media screen and (max-width: 600px) {
   .name {font-size: 1rem;}

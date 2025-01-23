@@ -1,0 +1,14 @@
+.counter {
+    text-align: center;
+    margin-top: 50px;
+}
+button {
+    font-size: 18px;
+    margin: 0 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.count {
+    font-size: 24px;
+    margin: 20px 0;
+}

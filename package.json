@@ -1,0 +1,19 @@
+{
+  "name": "mansourmahboubi.github.io",
+  "version": "1.0.0",
+  "description": "Mansour Mahboubi Personal website",
+  "author": "mansourmahboubi@outlook.com",
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "start": "live-server . --no-browser"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "eslint": "^9.24.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.0.0",
+    "live-server": "1.2.1"
+  }
+}

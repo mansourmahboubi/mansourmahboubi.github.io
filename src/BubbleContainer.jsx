@@ -31,7 +31,7 @@ function BubbleContainer() {
 
     const createBubble = () => {
         if (!isActive) return;
-        
+
         const newBubble = {
             id: Date.now(),
             size: Math.random() * 60 + 20,
@@ -43,7 +43,7 @@ function BubbleContainer() {
         setBubbles(prevBubbles => [...prevBubbles, newBubble]);
 
         setTimeout(() => {
-            setBubbles(prevBubbles => 
+            setBubbles(prevBubbles =>
                 prevBubbles.filter(bubble => bubble.id !== newBubble.id)
             );
         }, newBubble.duration * 1000);

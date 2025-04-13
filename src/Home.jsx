@@ -26,7 +26,7 @@ function Body() {
     return (
         <main style={styles.section}>
             <h1>Mansour Mahboubi</h1>
-            <img 
+            <img
             style={styles.mansourImage}
             src="assets/img/mansourmahboubi.jpeg" alt="Mansour Mahboubi" className="profile-picture" />
             <section className="welcome-section">

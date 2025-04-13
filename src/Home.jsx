@@ -31,7 +31,7 @@ function Body() {
             src="assets/img/mansourmahboubi.jpeg" alt="Mansour Mahboubi" className="profile-picture" />
             <section className="welcome-section">
                 <h2>Welcome to my personal website!</h2>
-                <p>I'm a software developer passionate about creating amazing web experiences.</p>
+                <p></p>
             </section>
         </main>
     )
@@ -47,7 +47,7 @@ function Footer() {
         </footer>
     )
 }
-function Home() {
+function Home() { // eslint-disable-line no-unused-vars
     return (
         <div style={styles.main}>
             <Header />

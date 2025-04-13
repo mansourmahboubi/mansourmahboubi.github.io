@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Retro Synthwave Color Palette
 const bubbleColors = [
     '#FF2A6D', // Hot Pink

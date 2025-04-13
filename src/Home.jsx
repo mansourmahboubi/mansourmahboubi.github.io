@@ -189,10 +189,7 @@ function Home() {
         <section style={styles.welcomeSection}>
           <h2>Welcome to my personal website!</h2>
           <p>
-            I'm a passionate developer dedicated to creating beautiful and
-            functional web experiences. With expertise in modern web
-            technologies, I strive to build innovative solutions that make a
-            difference.
+            I'm a software developer with a passion for open source.
           </p>
         </section>
       </main>
@@ -207,7 +204,7 @@ function Home() {
           <ul style={styles.socialLinks}>
             <li>
               <a
-                href="https://github.com"
+                href="https://www.linkedin.com/in/mansourmahboubi/"
                 style={styles.socialLink}
                 target="_blank"
                 rel="noopener noreferrer"

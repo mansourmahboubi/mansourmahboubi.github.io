@@ -1,54 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 body {
     margin: 0;
     overflow: hidden;
-    background-color: #1A1A2E; /* Dark blue background */
-    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    height: 100%;
+    width: 100%;
 }
 
-.bubble {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
-    animation: float linear infinite;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(100vh) scale(1);
-        opacity: 0.8;
-    }
-    100% {
-        transform: translateY(-100px) scale(0.3);
-        opacity: 0;
-    }
-}
-
-.controls {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 10px;
-    color: white;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-button {
-    margin: 5px;
-    padding: 8px 16px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: Arial, sans-serif;
-}
-
-button:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-1px);
+/* responsive image */
+img {
+    max-width: 100%;
+    height: auto;
 }

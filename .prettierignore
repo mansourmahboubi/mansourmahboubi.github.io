@@ -1,0 +1,20 @@
+# Dependencies
+node_modules
+package-lock.json
+yarn.lock
+.venv
+
+# Build outputs
+dist
+build
+coverage
+
+# Misc
+.git
+.cache
+.DS_Store
+assets
+
+# Generated files
+*.min.js
+*.bundle.js

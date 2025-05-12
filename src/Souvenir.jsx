@@ -5,6 +5,8 @@ function Souvenir() {
       margin: '0 auto',
       padding: '2rem',
       fontFamily: 'Arial, sans-serif',
+      maxHeight: '100vh',
+      overflowY: 'auto',
     },
     header: {
       textAlign: 'center',

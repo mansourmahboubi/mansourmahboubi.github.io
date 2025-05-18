@@ -13,7 +13,7 @@ const headerStyles = {
   },
   menuButton: {
     // hide menu button on mobile
-    display: "block",
+    display: "none",
     visibility: "hidden",
     padding: "0.5rem",
     backgroundColor: "transparent",

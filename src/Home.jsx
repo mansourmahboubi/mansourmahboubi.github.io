@@ -20,6 +20,7 @@ function Home() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme, isMobile }}>
       <div

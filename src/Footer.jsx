@@ -9,11 +9,11 @@ const footerStyles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    "@media (max-width: 768px)": {
-      flexDirection: "column",
-      gap: "1rem",
-      textAlign: "center",
-    },
+  },
+  footerContentMobile: {
+    flexDirection: "column",
+    gap: "1rem",
+    textAlign: "center",
   },
   socialLinks: {
     display: "flex",
@@ -31,7 +31,7 @@ const footerStyles = {
 };
 
 function Footer() {
-  const { theme } = React.useContext(ThemeContext);
+  const { theme, isMobile } = React.useContext(ThemeContext);
 
   return (
     <footer
@@ -40,7 +40,12 @@ function Footer() {
         backgroundColor: theme === "light" ? "#f8f9fa" : "#2d2d2d",
       }}
     >
-      <div style={footerStyles.footerContent}>
+      <div
+        style={{
+          ...footerStyles.footerContent,
+          ...(isMobile ? footerStyles.footerContentMobile : {}),
+        }}
+      >
         <p>&copy; 2024 Mansour Mahboubi. All rights reserved.</p>
         <ul style={footerStyles.socialLinks}>
           <li>

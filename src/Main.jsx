@@ -20,9 +20,9 @@ const mainStyles = {
   heading: {
     fontSize: "2.5rem",
     marginBottom: "1rem",
-    "@media (max-width: 768px)": {
-      fontSize: "2rem",
-    },
+  },
+  headingMobile: {
+    fontSize: "2rem",
   },
   welcomeSection: {
     maxWidth: "800px",
@@ -30,10 +30,17 @@ const mainStyles = {
   },
 };
 function Main() {
-  const { theme } = React.useContext(ThemeContext);
+  const { theme, isMobile } = React.useContext(ThemeContext);
   return (
     <main style={mainStyles.mainContent}>
-      <h1 style={mainStyles.heading}>Mansour Mahboubi</h1>
+      <h1
+        style={{
+          ...mainStyles.heading,
+          ...(isMobile ? mainStyles.headingMobile : {}),
+        }}
+      >
+        Mansour Mahboubi
+      </h1>
       <img
         style={{
           ...mainStyles.profileImage,

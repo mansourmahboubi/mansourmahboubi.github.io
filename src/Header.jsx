@@ -12,14 +12,13 @@ const headerStyles = {
     width: "100%",
   },
   menuButton: {
-    display: "none",
-    "@media (maxWidth: 768px)": {
-      display: "block",
-      padding: "0.5rem",
-      backgroundColor: "transparent",
-      border: "none",
-      cursor: "pointer",
-    },
+    // hide menu button on mobile
+    display: "block",
+    visibility: "hidden",
+    padding: "0.5rem",
+    backgroundColor: "transparent",
+    border: "none",
+    cursor: "pointer",
   },
   navList: {
     display: "flex",
@@ -27,14 +26,15 @@ const headerStyles = {
     listStyle: "none",
     margin: 0,
     padding: 0,
-    "@media (maxWidth: 768px)": {
-      flexDirection: "column",
-      position: "absolute",
-      top: "60px",
-      left: 0,
-      right: 0,
-      padding: "1rem",
-    },
+  },
+  navListMobile: {
+    // TODO: add mobile menu
+    // flexDirection: "column",
+    // position: "absolute",
+    // top: "60px",
+    // left: 0,
+    // right: 0,
+    // padding: "1rem",
   },
   navLink: {
     textDecoration: "none",
@@ -53,7 +53,7 @@ const headerStyles = {
   },
 };
 function Header() {
-  const { theme, toggleTheme } = React.useContext(ThemeContext);
+  const { theme, toggleTheme, isMobile } = React.useContext(ThemeContext);
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -68,9 +68,7 @@ function Header() {
         <button
           style={{
             ...headerStyles.menuButton,
-            "@media (max-width: 768px)": {
-              color: theme === "light" ? "#1a1a1a" : "#ffffff",
-            },
+            color: theme === "light" ? "#1a1a1a" : "#ffffff",
           }}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -79,10 +77,7 @@ function Header() {
         <ul
           style={{
             ...headerStyles.navList,
-            "@media (maxWidth: 768px)": {
-              backgroundColor: theme === "light" ? "#f8f9fa" : "#2d2d2d",
-              display: isMenuOpen ? "flex" : "none",
-            },
+            ...(isMobile ? headerStyles.navListMobile : {}),
           }}
         >
           <li>
@@ -96,7 +91,7 @@ function Header() {
               Home
             </a>
           </li>
-          <li>
+          {/* <li>
             <a
               href="#about"
               style={{
@@ -117,7 +112,7 @@ function Header() {
             >
               Contact
             </a>
-          </li>
+          </li> */}
         </ul>
         <button
           style={{

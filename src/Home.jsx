@@ -9,12 +9,19 @@ const styles = {
 
 function Home() {
   const [theme, setTheme] = React.useState("light");
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
+
+  React.useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, isMobile }}>
       <div
         style={{
           ...styles.main,

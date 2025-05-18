@@ -1,19 +1,22 @@
-// import React, { useState } from 'react';
-
+const styles = {
+  main: {
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    transition: "all 0.3s ease",
+  },
+};
 function Home() {
   const [theme, setTheme] = React.useState("light");
-  const styles = {
-    main: {
-      minHeight: "100vh",
-      display: "flex",
-      flexDirection: "column",
-      backgroundColor: theme === "light" ? "#ffffff" : "#1a1a1a",
-      color: theme === "light" ? "#1a1a1a" : "#ffffff",
-      transition: "all 0.3s ease",
-    }
-  };
+
   return (
-    <div style={styles.main}>
+    <div
+      style={{
+        ...styles.main,
+        backgroundColor: theme === "light" ? "#ffffff" : "#1a1a1a",
+        color: theme === "light" ? "#1a1a1a" : "#ffffff",
+      }}
+    >
       <Header />
       <Main />
       <Footer />

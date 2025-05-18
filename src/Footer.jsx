@@ -1,5 +1,6 @@
-const theme = "light";
 function Footer() {
+  const { theme, toggleTheme } = React.useContext(ThemeContext);
+
   const styles = {
     main: {
       minHeight: "100vh",

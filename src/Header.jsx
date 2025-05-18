@@ -1,5 +1,6 @@
-const theme = "light";
 function Header() {
+  const { theme, toggleTheme } = React.useContext(ThemeContext);
+
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const styles = {
@@ -89,10 +90,7 @@ function Header() {
             </a>
           </li>
         </ul>
-        <button
-          style={styles.themeToggle}
-          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-        >
+        <button style={styles.themeToggle} onClick={() => toggleTheme()}>
           {theme === "light" ? "🌙" : "☀️"}
         </button>
       </nav>

@@ -13,7 +13,11 @@
   <body>
     <div id="root"></div>
     <script type="text/babel" src="src/Home.jsx"></script>
+    <script type="text/babel" src="src/Header.jsx"></script>
+    <script type="text/babel" src="src/Main.jsx"></script>
+    <script type="text/babel" src="src/Footer.jsx"></script>
     <script type="text/babel">
+      const ThemeContext = React.createContext();
       const root = ReactDOM.createRoot(document.getElementById("root"));
       root.render(<Home />);
     </script>

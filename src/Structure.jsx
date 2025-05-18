@@ -7,7 +7,7 @@ const styles = {
   },
 };
 
-function Home() {
+function Structure({ children }) {
   const [theme, setTheme] = React.useState("light");
   const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
 
@@ -31,7 +31,7 @@ function Home() {
         }}
       >
         <Header />
-        <Main />
+        {children}
         <Footer />
       </div>
     </ThemeContext.Provider>

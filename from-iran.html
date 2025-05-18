@@ -12,10 +12,19 @@
 
   <body>
     <div id="root"></div>
+    <script type="text/babel" src="src/Structure.jsx"></script>
+    <script type="text/babel" src="src/Header.jsx"></script>
+    <script type="text/babel" src="src/Footer.jsx"></script>
+
     <script type="text/babel" src="src/Souvenir.jsx"></script>
     <script type="text/babel">
+      const ThemeContext = React.createContext();
       const root = ReactDOM.createRoot(document.getElementById("root"));
-      root.render(<Souvenir />);
+      root.render(
+        <Structure>
+          <Souvenir />
+        </Structure>,
+      );
     </script>
   </body>
 </html>

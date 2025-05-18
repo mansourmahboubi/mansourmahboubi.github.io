@@ -82,7 +82,7 @@ function Header() {
         >
           <li>
             <a
-              href="#home"
+              href="/#home"
               style={{
                 ...headerStyles.navLink,
                 color: theme === "light" ? "#1a1a1a" : "#ffffff",

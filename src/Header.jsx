@@ -91,18 +91,18 @@ function Header() {
               Home
             </a>
           </li>
-          {/* <li>
+          <li>
             <a
-              href="#about"
+              href="/from-iran.html"
               style={{
                 ...headerStyles.navLink,
                 color: theme === "light" ? "#1a1a1a" : "#ffffff",
               }}
             >
-              About
+              From Iran
             </a>
           </li>
-          <li>
+          {/* <li>
             <a
               href="#contact"
               style={{

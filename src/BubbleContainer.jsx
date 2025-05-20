@@ -8,12 +8,47 @@ const bubbleColors = [
   "#FFC759", // Yellow
   "#00FF9F", // Neon Green
 ];
-
+const Skills = [
+  "React",
+  "TypeScript",
+  "Python",
+  "Azure",
+  "AWS",
+  "Docker",
+  "Kubernetes",
+  "Git",
+  "GitHub",
+  "Github Actions",
+  "Linux",
+  "CI/CD",
+  "DevOps",
+  "Cloud",
+  "Cloud Native",
+  "PostgreSQL",
+  "FastAPI",
+  "Django",
+  "Fintech",
+  "Finance",
+  "Banking",
+  "Investing",
+  "Trading",
+  "Investment",
+  "Financial",
+  "Financial Services",
+  "Education",
+  "Legal Tech",
+  "Pandas",
+  "Numpy",
+  "React Native",
+  "Terraform",
+];
 function getRandomColor() {
   return bubbleColors[Math.floor(Math.random() * bubbleColors.length)];
 }
 
 function Bubble({ size, left, duration, color }) {
+  const randomSkill = Skills[Math.floor(Math.random() * Skills.length)];
+  const [text, setText] = React.useState(randomSkill);
   const bubbleStyle = {
     width: `${size}px`,
     height: `${size}px`,
@@ -21,9 +56,30 @@ function Bubble({ size, left, duration, color }) {
     animationDuration: `${duration}s`,
     background: `linear-gradient(45deg, ${color}88, ${color}44)`,
     border: `1px solid ${color}aa`,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "absolute",
   };
 
-  return <div className="bubble" style={bubbleStyle}></div>;
+  // Determine text size class based on bubble size
+  const getTextSizeClass = (size) => {
+    if (size < 30) return "text-[8px]";
+    if (size < 40) return "text-[10px]";
+    if (size < 50) return "text-[12px]";
+    if (size < 60) return "text-[14px]";
+    return "text-[16px]";
+  };
+
+  return (
+    <div className="bubble" style={bubbleStyle}>
+      <span
+        className={`${getTextSizeClass(size)} text-center px-0.5 leading-none`}
+      >
+        {text}
+      </span>
+    </div>
+  );
 }
 
 function BubbleContainer() {
@@ -37,7 +93,7 @@ function BubbleContainer() {
       id: Date.now(),
       size: Math.random() * 60 + 20,
       left: Math.random() * window.innerWidth,
-      duration: Math.random() * 8 + 4,
+      duration: Math.random() * 10 + 5,
       color: getRandomColor(),
     };
 
@@ -51,7 +107,7 @@ function BubbleContainer() {
   };
 
   React.useEffect(() => {
-    const intervalId = setInterval(createBubble, 300);
+    const intervalId = setInterval(createBubble, 1 * 10 ** 3);
     return () => clearInterval(intervalId);
   }, [isActive]);
 

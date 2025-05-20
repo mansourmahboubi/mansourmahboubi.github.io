@@ -36,7 +36,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-button {
+#bubble-container button {
   margin: 5px;
   padding: 8px 16px;
   background: rgba(255, 255, 255, 0.2);

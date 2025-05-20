@@ -8,14 +8,14 @@ const styles = {
 };
 
 const lightTheme = {
-  borderColor: "#007bff",
+  borderColor: "#4f46e5",
   backgroundColor: "#ffffff",
-  color: "#1a1a1a",
+  color: "#1e293b",
 };
 const darkTheme = {
-  borderColor: "#00a8ff",
-  backgroundColor: "#1a1a1a",
-  color: "#ffffff",
+  borderColor: "#818cf8",
+  backgroundColor: "#0f172a",
+  color: "#f8fafc",
 };
 function Structure({ children }) {
   // read from local storage

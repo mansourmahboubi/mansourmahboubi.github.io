@@ -8,7 +8,9 @@
     <script src="assets/react-dom.development.js"></script>
     <script src="assets/babel.min.js"></script>
     <script src="assets/tailwind.min.js"></script>
+
     <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/bubble.css" />
   </head>
 
   <body>
@@ -16,6 +18,7 @@
     <script type="text/babel" src="src/Structure.jsx"></script>
     <script type="text/babel" src="src/Header.jsx"></script>
     <script type="text/babel" src="src/Footer.jsx"></script>
+    <script type="text/babel" src="src/BubbleContainer.jsx"></script>
 
     <script type="text/babel" src="src/Main.jsx"></script>
     <script type="text/babel">
@@ -24,6 +27,7 @@
       root.render(
         <Structure>
           <Main />
+          <BubbleContainer />
         </Structure>,
       );
     </script>

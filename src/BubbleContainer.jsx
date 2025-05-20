@@ -64,13 +64,13 @@ function BubbleContainer() {
   };
 
   return (
-    <div>
-      <div className="controls">
+    <div className="absolute top-0 left-0 w-full">
+      {/* <div className="controls">
         <button onClick={toggleBubbles}>
           {isActive ? "✋ Stop Bubbles" : "▶️ Start Bubbles"}
         </button>
         <button onClick={clearAllBubbles}>🗑️ Clear All</button>
-      </div>
+      </div> */}
       {bubbles.map((bubble) => (
         <Bubble
           key={bubble.id}

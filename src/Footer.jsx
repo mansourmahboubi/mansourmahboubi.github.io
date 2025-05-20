@@ -63,7 +63,7 @@ function Footer() {
           </li>
           <li>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/mansourmahboubi"
               style={{
                 ...footerStyles.socialLink,
                 color: theme === "light" ? "#1a1a1a" : "#ffffff",
@@ -72,6 +72,19 @@ function Footer() {
               rel="noopener noreferrer"
             >
               LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/mansourmahboubi/c-v/releases/latest/download/main.pdf"
+              style={{
+                ...footerStyles.socialLink,
+                color: theme === "light" ? "#1a1a1a" : "#ffffff",
+              }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
             </a>
           </li>
         </ul>

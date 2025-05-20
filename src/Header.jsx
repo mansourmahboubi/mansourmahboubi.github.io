@@ -72,14 +72,18 @@ function Header() {
         <ul
           className={`flex gap-8 list-none m-0 p-0 ${
             isMobile
-              ? `${isMenuOpen ? "flex" : "hidden"} flex-col absolute top-full left-0 right-0 p-4 bg-inherit shadow-md z-10`
+              ? `${isMenuOpen ? "flex" : "hidden"} flex-col absolute top-full left-0 right-0 p-4 ${
+                  theme === "light"
+                    ? "bg-white shadow-lg border-t border-gray-100"
+                    : "bg-slate-800 shadow-lg border-t border-slate-700"
+                } z-10`
               : "flex-row"
           }`}
         >
           <li>
             <a
               href="/#home"
-              className={`block py-2 no-underline font-medium transition-colors duration-300 hover:text-blue-600 ${
+              className={`block py-2 px-4 no-underline font-medium transition-colors duration-300 hover:text-blue-600 rounded-md hover:bg-gray-100 dark:hover:bg-slate-700 ${
                 theme === "light" ? "text-gray-900" : "text-white"
               }`}
             >
@@ -89,7 +93,7 @@ function Header() {
           <li>
             <a
               href="/from-iran.html"
-              className={`block py-2 no-underline font-medium transition-colors duration-300 hover:text-blue-600 ${
+              className={`block py-2 px-4 no-underline font-medium transition-colors duration-300 hover:text-blue-600 rounded-md hover:bg-gray-100 dark:hover:bg-slate-700 ${
                 theme === "light" ? "text-gray-900" : "text-white"
               }`}
             >

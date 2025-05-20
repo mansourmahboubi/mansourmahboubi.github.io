@@ -54,39 +54,34 @@ const headerStyles = {
 };
 function Header() {
   const { theme, toggleTheme, isMobile } = React.useContext(ThemeContext);
-
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
     <header
-      style={{
-        ...headerStyles.header,
-        backgroundColor: theme === "light" ? "#f8f9fa" : "#2d2d2d",
-      }}
+      className={`p-4 shadow-md relative ${theme === "light" ? "bg-gray-50" : "bg-gray-800"}`}
     >
-      <nav style={headerStyles.nav}>
+      <nav className="flex justify-between items-center max-w-7xl mx-auto w-full">
         <button
-          style={{
-            ...headerStyles.menuButton,
-            color: theme === "light" ? "#1a1a1a" : "#ffffff",
-          }}
+          className={`md:hidden p-2 bg-transparent border-none cursor-pointer ${
+            theme === "light" ? "text-gray-900" : "text-white"
+          }`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? "✕" : "☰"}
         </button>
         <ul
-          style={{
-            ...headerStyles.navList,
-            ...(isMobile ? headerStyles.navListMobile : {}),
-          }}
+          className={`flex gap-8 list-none m-0 p-0 ${
+            isMobile
+              ? `${isMenuOpen ? "flex" : "hidden"} flex-col absolute top-full left-0 right-0 p-4 bg-inherit shadow-md z-10`
+              : "flex-row"
+          }`}
         >
           <li>
             <a
               href="/#home"
-              style={{
-                ...headerStyles.navLink,
-                color: theme === "light" ? "#1a1a1a" : "#ffffff",
-              }}
+              className={`block py-2 no-underline font-medium transition-colors duration-300 hover:text-blue-600 ${
+                theme === "light" ? "text-gray-900" : "text-white"
+              }`}
             >
               Home
             </a>
@@ -94,10 +89,9 @@ function Header() {
           <li>
             <a
               href="/from-iran.html"
-              style={{
-                ...headerStyles.navLink,
-                color: theme === "light" ? "#1a1a1a" : "#ffffff",
-              }}
+              className={`block py-2 no-underline font-medium transition-colors duration-300 hover:text-blue-600 ${
+                theme === "light" ? "text-gray-900" : "text-white"
+              }`}
             >
               From Iran
             </a>
@@ -105,21 +99,20 @@ function Header() {
           {/* <li>
             <a
               href="#contact"
-              style={{
-                ...headerStyles.navLink,
-                color: theme === "light" ? "#1a1a1a" : "#ffffff",
-              }}
+              className={`block py-2 no-underline font-medium transition-colors duration-300 hover:text-blue-600 ${
+                theme === 'light' ? 'text-gray-900' : 'text-white'
+              }`}
             >
               Contact
             </a>
           </li> */}
         </ul>
         <button
-          style={{
-            ...headerStyles.themeToggle,
-            backgroundColor: theme === "light" ? "#1a1a1a" : "#ffffff",
-            color: theme === "light" ? "#ffffff" : "#1a1a1a",
-          }}
+          className={`px-4 py-2 border-none rounded cursor-pointer transition-all duration-300 ${
+            theme === "light"
+              ? "bg-gray-900 text-white hover:bg-gray-800"
+              : "bg-white text-gray-900 hover:bg-gray-100"
+          }`}
           onClick={() => toggleTheme()}
         >
           {theme === "light" ? "🌙" : "☀️"}

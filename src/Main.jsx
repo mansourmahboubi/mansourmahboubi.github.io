@@ -1,69 +1,18 @@
-const mainStyles = {
-  mainContent: {
-    flex: 1,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    // padding: "2rem",
-    maxWidth: "1200px",
-    margin: "0 auto",
-    width: "100%",
-    textAlign: "center",
-  },
-  profileImage: {
-    width: "200px",
-    height: "200px",
-    borderRadius: "50%",
-    objectFit: "cover",
-    marginBottom: "2rem",
-  },
-  heading: {
-    fontSize: "2.5rem",
-    marginBottom: "1rem",
-  },
-  headingMobile: {
-    fontSize: "2rem",
-  },
-  welcomeSection: {
-    maxWidth: "800px",
-    margin: "2rem auto",
-    padding: "0 2rem",
-  },
-  welcomeHeading: {
-    fontSize: "1.875rem",
-    fontWeight: "bold",
-    marginBottom: "1rem",
-  },
-  welcomeText: {
-    fontSize: "1.125rem",
-    lineHeight: "1.75",
-    marginBottom: "1.5rem",
-    color: "inherit",
-    opacity: 0.8,
-  },
-};
 function Main() {
   const { themeSettings, isMobile } = React.useContext(ThemeContext);
   return (
-    <main style={mainStyles.mainContent}>
-      <h1
-        style={{
-          ...mainStyles.heading,
-          ...(isMobile ? mainStyles.headingMobile : {}),
-        }}
-      >
+    <main className="flex-1 flex flex-col items-center max-w-[1200px] mx-auto w-full text-center">
+      <h1 className={`text-4xl m-4 ${isMobile ? "text-3xl" : ""}`}>
         Hi, I'm Mansour 👋
       </h1>
       <img
-        style={{
-          ...mainStyles.profileImage,
-          border: `3px solid ${themeSettings.borderColor}`,
-        }}
+        className="w-[200px] h-[200px] rounded-full object-cover mb-8"
+        style={{ border: `3px solid ${themeSettings.borderColor}` }}
         src="assets/img/mansourmahboubi.jpeg"
         alt="Mansour Mahboubi"
       />
-      <section style={mainStyles.welcomeSection}>
-        <p style={mainStyles.welcomeText}>
+      <section className="max-w-[800px] my-8 px-8">
+        <p className="text-lg leading-7 mb-6 opacity-80">
           I'm an IT engineer with a bachelor's degree from the University of
           Tehran. My journey in technology began with a deep passion for
           GNU/Linux and Open Source software, which laid the foundation for my

@@ -1,60 +1,23 @@
-const footerStyles = {
-  footer: {
-    padding: "2rem",
-    marginTop: "auto",
-  },
-  footerContent: {
-    maxWidth: "1200px",
-    margin: "0 auto",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  footerContentMobile: {
-    flexDirection: "column",
-    gap: "1rem",
-    textAlign: "center",
-  },
-  socialLinks: {
-    display: "flex",
-    gap: "1rem",
-    listStyle: "none",
-    padding: 0,
-  },
-  socialLink: {
-    textDecoration: "none",
-    transition: "color 0.3s ease",
-    ":hover": {
-      color: "#007bff",
-    },
-  },
-};
-
 function Footer() {
   const { theme, isMobile } = React.useContext(ThemeContext);
 
   return (
     <footer
-      style={{
-        ...footerStyles.footer,
-        backgroundColor: theme === "light" ? "#f8f9fa" : "#2d2d2d",
-      }}
+      className={`py-8 mt-auto ${theme === "light" ? "bg-gray-50" : "bg-gray-800"}`}
     >
       <div
-        style={{
-          ...footerStyles.footerContent,
-          ...(isMobile ? footerStyles.footerContentMobile : {}),
-        }}
+        className={`max-w-7xl mx-auto px-4 flex ${isMobile ? "flex-col items-center gap-4 text-center" : "justify-between items-center"}`}
       >
-        <p>&copy; 2024 Mansour Mahboubi. All rights reserved.</p>
-        <ul style={footerStyles.socialLinks}>
+        <p className="text-sm">
+          &copy; 2024 Mansour Mahboubi. All rights reserved.
+        </p>
+        <ul className="flex gap-4 list-none p-0">
           <li>
             <a
               href="https://www.linkedin.com/in/mansourmahboubi/"
-              style={{
-                ...footerStyles.socialLink,
-                color: theme === "light" ? "#1a1a1a" : "#ffffff",
-              }}
+              className={`transition-colors duration-300 hover:text-blue-600 no-underline ${
+                theme === "light" ? "text-gray-900" : "text-white"
+              }`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -64,10 +27,9 @@ function Footer() {
           <li>
             <a
               href="https://linkedin.com/in/mansourmahboubi"
-              style={{
-                ...footerStyles.socialLink,
-                color: theme === "light" ? "#1a1a1a" : "#ffffff",
-              }}
+              className={`transition-colors duration-300 hover:text-blue-600 no-underline ${
+                theme === "light" ? "text-gray-900" : "text-white"
+              }`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -77,10 +39,9 @@ function Footer() {
           <li>
             <a
               href="https://github.com/mansourmahboubi/c-v/releases/latest/download/main.pdf"
-              style={{
-                ...footerStyles.socialLink,
-                color: theme === "light" ? "#1a1a1a" : "#ffffff",
-              }}
+              className={`transition-colors duration-300 hover:text-blue-600 no-underline ${
+                theme === "light" ? "text-gray-900" : "text-white"
+              }`}
               target="_blank"
               rel="noopener noreferrer"
             >

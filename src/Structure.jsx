@@ -1,12 +1,3 @@
-const styles = {
-  main: {
-    minHeight: "100vh",
-    display: "flex",
-    flexDirection: "column",
-    transition: "all 0.3s ease",
-  },
-};
-
 const lightTheme = {
   borderColor: "#4f46e5",
   backgroundColor: "#ffffff",
@@ -42,11 +33,11 @@ function Structure({ children }) {
       value={{ theme, toggleTheme, isMobile, themeSettings }}
     >
       <div
-        style={{
-          ...styles.main,
-          backgroundColor: themeSettings.backgroundColor,
-          color: themeSettings.color,
-        }}
+        className={`min-h-screen flex flex-col transition-all duration-300 ease-in-out ${
+          theme === "light"
+            ? "bg-white text-slate-800 border-indigo-600"
+            : "bg-slate-900 text-slate-50 border-indigo-400"
+        }`}
       >
         <Header />
         {children}

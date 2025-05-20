@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write . --ignore-unknown",
+    "fmt": "prettier --write . --ignore-unknown",
     "start": "live-server . --no-browser"
   },
   "devDependencies": {

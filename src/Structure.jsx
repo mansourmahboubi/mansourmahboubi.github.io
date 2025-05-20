@@ -8,11 +8,15 @@ const styles = {
 };
 
 function Structure({ children }) {
-  const [theme, setTheme] = React.useState("light");
+  // read from local storage
+  const [theme, setTheme] = React.useState(
+    localStorage.getItem("theme") || "light",
+  );
   const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
+    localStorage.setItem("theme", theme === "light" ? "dark" : "light");
   };
 
   React.useEffect(() => {

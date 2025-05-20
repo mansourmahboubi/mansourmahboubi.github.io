@@ -9,5 +9,5 @@ repos:
     hooks:
       - id: prettier
         name: prettier
-        entry: yarn format
+        entry: yarn fmt
         language: system

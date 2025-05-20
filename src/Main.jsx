@@ -4,7 +4,7 @@ const mainStyles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    padding: "2rem",
+    // padding: "2rem",
     maxWidth: "1200px",
     margin: "0 auto",
     width: "100%",
@@ -27,6 +27,19 @@ const mainStyles = {
   welcomeSection: {
     maxWidth: "800px",
     margin: "2rem auto",
+    padding: "0 2rem",
+  },
+  welcomeHeading: {
+    fontSize: "1.875rem",
+    fontWeight: "bold",
+    marginBottom: "1rem",
+  },
+  welcomeText: {
+    fontSize: "1.125rem",
+    lineHeight: "1.75",
+    marginBottom: "1.5rem",
+    color: "inherit",
+    opacity: 0.8,
   },
 };
 function Main() {
@@ -39,7 +52,7 @@ function Main() {
           ...(isMobile ? mainStyles.headingMobile : {}),
         }}
       >
-        Mansour Mahboubi
+        Hi, I'm Mansour 👋
       </h1>
       <img
         style={{
@@ -50,8 +63,15 @@ function Main() {
         alt="Mansour Mahboubi"
       />
       <section style={mainStyles.welcomeSection}>
-        <h2>Welcome to my personal website!</h2>
-        <p>I'm a software developer with a passion for open source.</p>
+        <p style={mainStyles.welcomeText}>
+          I'm an IT engineer with a bachelor's degree from the University of
+          Tehran. My journey in technology began with a deep passion for
+          GNU/Linux and Open Source software, which laid the foundation for my
+          professional career. Over the years, I've gained extensive experience
+          across diverse sectors including FinTech, EdTech, and LegalTech,
+          working on innovative solutions that bridge technology with real-world
+          applications.
+        </p>
       </section>
     </main>
   );

@@ -7,6 +7,16 @@ const styles = {
   },
 };
 
+const lightTheme = {
+  borderColor: "#007bff",
+  backgroundColor: "#ffffff",
+  color: "#1a1a1a",
+};
+const darkTheme = {
+  borderColor: "#00a8ff",
+  backgroundColor: "#1a1a1a",
+  color: "#ffffff",
+};
 function Structure({ children }) {
   // read from local storage
   const [theme, setTheme] = React.useState(
@@ -25,13 +35,17 @@ function Structure({ children }) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const themeSettings = theme === "light" ? lightTheme : darkTheme;
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, isMobile }}>
+    <ThemeContext.Provider
+      value={{ theme, toggleTheme, isMobile, themeSettings }}
+    >
       <div
         style={{
           ...styles.main,
-          backgroundColor: theme === "light" ? "#ffffff" : "#1a1a1a",
-          color: theme === "light" ? "#1a1a1a" : "#ffffff",
+          backgroundColor: themeSettings.backgroundColor,
+          color: themeSettings.color,
         }}
       >
         <Header />

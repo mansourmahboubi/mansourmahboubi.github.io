@@ -30,7 +30,7 @@ const mainStyles = {
   },
 };
 function Main() {
-  const { theme, isMobile } = React.useContext(ThemeContext);
+  const { themeSettings, isMobile } = React.useContext(ThemeContext);
   return (
     <main style={mainStyles.mainContent}>
       <h1
@@ -44,7 +44,7 @@ function Main() {
       <img
         style={{
           ...mainStyles.profileImage,
-          border: `3px solid ${theme === "light" ? "#007bff" : "#00a8ff"}`,
+          border: `3px solid ${themeSettings.borderColor}`,
         }}
         src="assets/img/mansourmahboubi.jpeg"
         alt="Mansour Mahboubi"

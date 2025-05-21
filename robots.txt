@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Add sitemap if you have one
+Sitemap: https://mansourmahboubi.github.io/sitemap.xml

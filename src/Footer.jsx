@@ -1,3 +1,25 @@
+const urls = [
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/mansourmahboubi/",
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/mansourmahboubi",
+  },
+  {
+    name: "Keybase",
+    url: "https://keybase.io/mansourmahboubi",
+  },
+  {
+    name: "Resume",
+    url: "https://github.com/mansourmahboubi/c-v/releases/latest/download/main.pdf",
+  },
+  {
+    name: "Email",
+    url: "mailto:mansourmahboubi@outlook.com",
+  },
+];
 function Footer() {
   const { theme, isMobile } = React.useContext(ThemeContext);
 
@@ -12,42 +34,20 @@ function Footer() {
           &copy; 2024 Mansour Mahboubi. All rights reserved.
         </p>
         <ul className="flex gap-4 list-none p-0">
-          <li>
-            <a
-              href="https://www.linkedin.com/in/mansourmahboubi/"
-              className={`transition-colors duration-300 hover:text-blue-600 no-underline ${
-                theme === "light" ? "text-gray-900" : "text-white"
-              }`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://linkedin.com/in/mansourmahboubi"
-              className={`transition-colors duration-300 hover:text-blue-600 no-underline ${
-                theme === "light" ? "text-gray-900" : "text-white"
-              }`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/mansourmahboubi/c-v/releases/latest/download/main.pdf"
-              className={`transition-colors duration-300 hover:text-blue-600 no-underline ${
-                theme === "light" ? "text-gray-900" : "text-white"
-              }`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume
-            </a>
-          </li>
+          {urls.map((link) => (
+            <li key={link.name}>
+              <a
+                href={link.url}
+                className={`transition-colors duration-300 hover:text-blue-600 no-underline ${
+                  theme === "light" ? "text-gray-900" : "text-white"
+                }`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </footer>

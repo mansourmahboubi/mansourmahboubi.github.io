@@ -4,14 +4,26 @@
 
 # TODO
 
-- [ ] Add a new page for the blog
+- [ ] Create a dedicated blog page
+- [ ] Integrate Webpack for module bundling
+- [x] Integrate Tailwind CSS
+- [x] Add sitemap support
+- [x] Add robots.txt support
+- [ ] Add favicon support
+- [ ] Add web app manifest support
+- [ ] Enhance the overall design
+- [ ] Develop a color palette with rationale
+- [ ] Choose a design style name like "Bento" or "Masonry"
+- [ ] Implement multilingual support
+- [ ] Improve SEO (Search Engine Optimization)
+- [ ] Integrate analytics
 
 # Why
 
-- [ ] To centralize all my links in one place
-- [ ] To have a single place to update my brand
-- [ ] To have a single place to update my social links
-- [ ] To have a single place to update my resume
+- [x] To centralize all my links in one place
+- [x] To have a single place to update my brand
+- [x] To have a single place to update my social links
+- [ ] To have a single place to update my resume ?
 
 # Rules
 

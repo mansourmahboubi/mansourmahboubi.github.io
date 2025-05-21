@@ -8,6 +8,10 @@ body {
   width: 100%;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 /* responsive image */
 img {
   max-width: 100%;

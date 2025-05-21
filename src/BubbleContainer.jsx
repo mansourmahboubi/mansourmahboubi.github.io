@@ -120,7 +120,10 @@ function BubbleContainer() {
   };
 
   return (
-    <div className="absolute top-0 left-0 w-full" id="bubble-container">
+    <div
+      className="absolute top-0 left-0 w-full overflow-x-clip"
+      id="bubble-container"
+    >
       {/* <div className="controls">
         <button onClick={toggleBubbles}>
           {isActive ? "✋ Stop Bubbles" : "▶️ Start Bubbles"}

@@ -23,7 +23,7 @@ const items = [
 
 function Souvenir() {
   return (
-    <div className="max-w-7xl mx-auto p-8 font-sans max-h-screen overflow-y-auto">
+    <div className="max-w-7xl mx-auto p-8 font-sans max-h-screen">
       <header className="text-center mb-12">
         <h1 className="text-4xl mb-4">Traditional Iranian Delicacies</h1>
         <p className="text-lg text-gray-600 dark:text-gray-300">

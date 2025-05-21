@@ -1,30 +1,24 @@
-body {
-  margin: 0;
-  overflow: hidden;
-  background-color: #1a1a2e; /* Dark blue background */
-  height: 100vh;
-}
-
-.bubble {
+#bubble-container .bubble {
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
   box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
   animation: float linear infinite;
+  will-change: transform;
 }
 
 @keyframes float {
   0% {
-    transform: translateY(100vh) scale(1);
-    opacity: 0.8;
+    transform: translateY(90vh) scale(1);
+    opacity: 0.9;
   }
   100% {
     transform: translateY(-100px) scale(0.3);
-    opacity: 0;
+    opacity: 0.3;
   }
 }
 
-.controls {
+#bubble-container .controls {
   position: fixed;
   top: 20px;
   left: 20px;
@@ -48,7 +42,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-button:hover {
+#bubble-container button:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: translateY(-1px);
 }

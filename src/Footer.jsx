@@ -13,7 +13,7 @@ const urls = [
   },
   {
     name: "Resume",
-    url: "https://github.com/mansourmahboubi/c-v/releases/latest/download/main.pdf",
+    url: "https://github.com/mansourmahboubi/c-v/releases/latest/download/Mansour_MAHBOUBI-web.pdf",
   },
   {
     name: "Email",

@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/mansourmahboubi
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://mansourmahboubi.github.io
+  * I am mansourmahboubi (https://keybase.io/mansourmahboubi) on keybase.
+  * I have a public key ASDEpVYEj2niK0veJ8CB9PH9fe0BSM657aMppuM_GATjtgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120c4a556048f69e22b4bde27c081f4f1fd7ded0148ceb9eda329a6e33f1804e3b60a",
+      "host": "keybase.io",
+      "kid": "0120c4a556048f69e22b4bde27c081f4f1fd7ded0148ceb9eda329a6e33f1804e3b60a",
+      "uid": "288f7fef21291b45c8b1795f08ce2619",
+      "username": "mansourmahboubi"
+    },
+    "merkle_root": {
+      "ctime": 1748504433,
+      "hash": "e606f2824c0b6c04f6538fa60bddd7912edb01af4bb6ea2a4eb2f128769cce066f19c341bb527c8b0346a98710f40abc5a4a3ee064d6a744167c885e7f6e716a",
+      "hash_meta": "91a0ff165f14e699f5c1ef5e251d003eac956396a2c73ba73df11523b7fd6f21",
+      "seqno": 26835301
+    },
+    "service": {
+      "entropy": "R9VmIVqFTaQeWo7T1B65/rBQ",
+      "hostname": "mansourmahboubi.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.5.1"
+  },
+  "ctime": 1748504474,
+  "expire_in": 504576000,
+  "prev": "e9548a7eaea1328c5c061d9f877d141bf122883d8f91909a1e4a962075255e98",
+  "seqno": 17,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgxKVWBI9p4itL3ifAgfTx/X3tAUjOue2jKabjPxgE47YKp3BheWxvYWTESpcCEcQg6VSKfq6hMoxcBh2fh30UG/EiiD2PkZCaHkqWIHUlXpjEIPrhjjrmwrqbfKKkwbzno8OToKllqLzV2S9nakujoXsoAgHCo3NpZ8RANsSjCyrsM93OthCJ6VbTfovERtuDxnsWQpndvTrBQKZEL4kGm69yFnJQ8/uNhhaQNvh/jmACICtafm0/CYj2BKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINb5vhSc36q04jKrM85tDVHMq0vNM+NHM2p2ADdVjZsJo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mansourmahboubi
+
+==================================================================
